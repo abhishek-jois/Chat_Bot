@@ -1,0 +1,12 @@
+run = "cd backend && python main.py"
+modules = ["python-3.10"]
+
+[nix]
+channel = "stable-23_11"
+
+[deployment]
+run = ["sh", "-c", "cd backend && python main.py"]
+
+[[ports]]
+localPort = 8000
+externalPort = 80
